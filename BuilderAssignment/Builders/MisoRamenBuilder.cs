@@ -31,7 +31,7 @@ namespace BuilderAssignment.Builders
 
         public IRamenBuilder AddExtras()
         {
-            ramen.Extras = Extra.Corn;
+            ramen.Extras.Add(Extra.Corn);
             return this;
         }
 

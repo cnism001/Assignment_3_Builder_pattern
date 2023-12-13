@@ -29,7 +29,7 @@ namespace BuilderAssignment.Builders
 
         public IRamenBuilder AddExtras()
         {
-            ramen.Extras = Extra.ExtraSpice;
+            ramen.Extras.Add(Extra.ExtraSpice);
             return this;
         }
 

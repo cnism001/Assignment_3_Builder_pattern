@@ -17,15 +17,16 @@ namespace BuilderAssignment.Models
         public BrothType Broth { get; set; }
         public NoodleType Noodles { get; set; }
         public List<Topping> Toppings { get; set; } = new List<Topping>();
-        public Extra Extras { get; set; }
+        public List<Extra> Extras { get; set; } = new List<Extra>();
 
         //TODO#2: Return description of finished bowl of ramen
         //string description = ramen.FinishedBowlOfRamen(); would return description of ramen instance of RamenBowl
         public string FinishedBowlOfRamen()
         {
-            //convertiong contents of list Toppings to string to return its contents to handle multiple toppings
+            //convertiong contents of list Toppings to string to return its contents to handle multiple toppings na/or extras
             string toppingsString = string.Join(", ", Toppings.Select(t => t.ToString()));
-            return $"Broth: {Broth}, Noodles: {Noodles}, Toppings: {toppingsString}, Extras: {Extras}";
+            string extraString = string.Join(", ", Extras.Select(t => t.ToString()));
+            return $"Broth: {Broth}, Noodles: {Noodles}, Toppings: {toppingsString}, Extras: {extraString}";
         }
     }
 }
