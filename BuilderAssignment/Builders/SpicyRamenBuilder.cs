@@ -1,7 +1,7 @@
-﻿using BuilderAssignment.Builders;
+﻿using BuilderAssignment.Models;
 using System.Collections.Generic;
 
-namespace BuilderAssignment.Models
+namespace BuilderAssignment.Builders
 {
     public class SpicyRamenBuilder : IRamenBuilder
     {

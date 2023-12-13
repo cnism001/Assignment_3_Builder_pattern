@@ -1,6 +1,11 @@
-﻿using BuilderAssignment.Builders;
+﻿using BuilderAssignment.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace BuilderAssignment.Models
+namespace BuilderAssignment.Builders
 {
     public class MisoRamenBuilder : IRamenBuilder
     {
