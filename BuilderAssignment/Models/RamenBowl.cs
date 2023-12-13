@@ -23,7 +23,7 @@ namespace BuilderAssignment.Models
         //string description = ramen.FinishedBowlOfRamen(); would return description of ramen instance of RamenBowl
         public string FinishedBowlOfRamen()
         {
-            //convertiong contents of list Toppings to string to return its contents to handle multiple toppings na/or extras
+            //converting contents of list Toppings and Extras to string to return their contents to handle multiple toppings and/or extras
             string toppingsString = string.Join(", ", Toppings.Select(t => t.ToString()));
             string extraString = string.Join(", ", Extras.Select(t => t.ToString()));
             return $"Broth: {Broth}, Noodles: {Noodles}, Toppings: {toppingsString}, Extras: {extraString}";
