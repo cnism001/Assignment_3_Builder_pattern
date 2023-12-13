@@ -1,32 +1,35 @@
 ﻿using BuilderAssignment.Builders;
+using System.Collections.Generic;
 
 namespace BuilderAssignment.Models
 {
-    public class MisoRamenBuilder : IRamenBuilder
+    public class SpicyRamenBuilder : IRamenBuilder
     {
         private RamenBowl ramen = new RamenBowl();
 
         public IRamenBuilder SetBroth(BrothType broth)
         {
-            ramen.Broth = BrothType.Miso;
+            ramen.Broth = BrothType.SpicyTonkotsu; 
             return this;
         }
 
         public IRamenBuilder SetNoodles(NoodleType noodles)
         {
-            ramen.Noodles = NoodleType.Udon;
+            ramen.Noodles = NoodleType.Thin; 
             return this;
         }
 
         public IRamenBuilder AddToppings(Topping topping)
         {
-            ramen.Toppings.Add(Topping.GreenOnions);
+            // Add toppings to the list
+            ramen.Toppings.Add(Topping.ChashuPork); 
+            ramen.Toppings.Add(Topping.GreenOnions); 
             return this;
         }
 
         public IRamenBuilder AddExtras(Extra extra)
         {
-            ramen.Extras = Extra.Corn;
+            ramen.Extras = Extra.ExtraSpice;
             return this;
         }
 

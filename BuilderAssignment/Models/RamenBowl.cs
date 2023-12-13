@@ -16,14 +16,16 @@ namespace BuilderAssignment.Models
         // Properties for each ingredient type
         public BrothType Broth { get; set; }
         public NoodleType Noodles { get; set; }
-        public Topping Toppings { get; set; }
+        public List<Topping> Toppings { get; set; } = new List<Topping>();
         public Extra Extras { get; set; }
 
         //TODO#2: Return description of finished bowl of ramen
         //string description = ramen.FinishedBowlOfRamen(); would return description of ramen instance of RamenBowl
         public string FinishedBowlOfRamen()
         {
-            return $"Broth: {Broth}, Noodles: {Noodles}, Toppings: {Toppings}, Extras: {Extras}";
+            //convertiong contents of list Toppings to string to return its contents to handle multiple toppings
+            string toppingsString = string.Join(", ", Toppings.Select(t => t.ToString()));
+            return $"Broth: {Broth}, Noodles: {Noodles}, Toppings: {toppingsString}, Extras: {Extras}";
         }
     }
 }
