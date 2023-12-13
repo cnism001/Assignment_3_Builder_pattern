@@ -18,10 +18,12 @@ namespace BuilderAssignment.Models
         public NoodleType Noodles { get; set; }
         public Topping Toppings { get; set; }
         public Extra Extras { get; set; }
+
         //TODO#2: Return description of finished bowl of ramen
-        public static string FinishedBowlOfRamen()
+        //string description = myRamen.FinishedBowlOfRamen(); would return description of myRamen instance of RamenBowl
+        public string FinishedBowlOfRamen()
         {
-            return "";
+            return $"Broth: {Broth}, Noodles: {Noodles}, Toppings: {Toppings}, Extras: {Extras}";
         }
     }
 }
