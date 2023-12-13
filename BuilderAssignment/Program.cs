@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using BuilderAssignment.Builders;
+using BuilderAssignment.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace BuilderAssignment
 {
@@ -45,7 +47,13 @@ namespace BuilderAssignment
             // TODO#1: Wake up your RamenChef by initializing it
             RamenChef chef = new RamenChef();
             // TODO#2: Create new RamenBuilder's for each ramen recepies (MisoRamenBuilder, SpicyRamenBuilder, VeganRamenBuilder) 
+            IRamenBuilder misoRamenBuilder = new MisoRamenBuilder();
+            IRamenBuilder spicyRamenBuilder = new SpicyRamenBuilder();
+            IRamenBuilder veganRamenBuilder = new VeganRamenBuilder();
             // TODO#3: Use your RamenChef to prepare (build) each type of ramen (Miso, Spicy, Vegan)
+            RamenBowl misoRamen = chef.PrepareRamen(misoRamenBuilder);
+            RamenBowl spicyRamen = chef.PrepareRamen(spicyRamenBuilder);
+            RamenBowl veganRamen = chef.PrepareRamen(veganRamenBuilder);
             // TODO#4: After the RamenCheft has prepared the bowl of ramen, use FinishedBowlOfRamen to get the content of
             //         the RamenBowl and print it out using WriteLine method
 
