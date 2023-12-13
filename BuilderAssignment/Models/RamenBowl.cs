@@ -20,7 +20,7 @@ namespace BuilderAssignment.Models
         public Extra Extras { get; set; }
 
         //TODO#2: Return description of finished bowl of ramen
-        //string description = myRamen.FinishedBowlOfRamen(); would return description of myRamen instance of RamenBowl
+        //string description = ramen.FinishedBowlOfRamen(); would return description of ramen instance of RamenBowl
         public string FinishedBowlOfRamen()
         {
             return $"Broth: {Broth}, Noodles: {Noodles}, Toppings: {Toppings}, Extras: {Extras}";
