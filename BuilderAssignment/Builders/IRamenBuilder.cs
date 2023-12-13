@@ -9,20 +9,21 @@ namespace BuilderAssignment.Builders
     {
         // TODO#1: Add methods for following steps
         // - Setting broth
-        IRamenBuilder SetBroth(BrothType broth);
+        IRamenBuilder SetBroth();
 
         // - Setting noodles
-        IRamenBuilder SetNoodles(NoodleType noodles);
+        IRamenBuilder SetNoodles();
 
         // - Adding toppings
-        IRamenBuilder AddToppings(Topping toppings);
+        IRamenBuilder AddToppings();
         // - Adding Extras
-        IRamenBuilder AddExtras(Extra extras);
+        IRamenBuilder AddExtras();
 
         /// <summary>
         /// Returns the value of build RamenBowl
         /// </summary>
         /// <returns></returns>
         RamenBowl GetRamen();
+
     }
 }

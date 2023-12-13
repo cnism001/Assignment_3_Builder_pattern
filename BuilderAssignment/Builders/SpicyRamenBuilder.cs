@@ -7,19 +7,19 @@ namespace BuilderAssignment.Builders
     {
         private RamenBowl ramen = new RamenBowl();
 
-        public IRamenBuilder SetBroth(BrothType broth)
+        public IRamenBuilder SetBroth()
         {
             ramen.Broth = BrothType.SpicyTonkotsu; 
             return this;
         }
 
-        public IRamenBuilder SetNoodles(NoodleType noodles)
+        public IRamenBuilder SetNoodles()
         {
             ramen.Noodles = NoodleType.Thin; 
             return this;
         }
 
-        public IRamenBuilder AddToppings(Topping topping)
+        public IRamenBuilder AddToppings()
         {
             // Add toppings to the list
             ramen.Toppings.Add(Topping.ChashuPork); 
@@ -27,7 +27,7 @@ namespace BuilderAssignment.Builders
             return this;
         }
 
-        public IRamenBuilder AddExtras(Extra extra)
+        public IRamenBuilder AddExtras()
         {
             ramen.Extras = Extra.ExtraSpice;
             return this;
