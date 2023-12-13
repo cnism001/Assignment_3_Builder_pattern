@@ -13,7 +13,11 @@ namespace BuilderAssignment.Models
     public class RamenBowl
     {
         //TODO#1: Add attributes for each enum in IngredientEnums.cs file
-
+        // Properties for each ingredient type
+        public BrothType Broth { get; set; }
+        public NoodleType Noodles { get; set; }
+        public Topping Toppings { get; set; }
+        public Extra Extras { get; set; }
         //TODO#2: Return description of finished bowl of ramen
         public static string FinishedBowlOfRamen()
         {
