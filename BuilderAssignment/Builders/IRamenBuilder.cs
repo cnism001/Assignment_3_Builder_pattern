@@ -9,9 +9,15 @@ namespace BuilderAssignment.Builders
     {
         // TODO#1: Add methods for following steps
         // - Setting broth
+        IRamenBuilder SetBroth(string broth);
+
         // - Setting noodles
+        IRamenBuilder SetNoodles(string noodles);
+
         // - Adding toppings
+        IRamenBuilder AddToppings(string toppings);
         // - Adding Extras
+        IRamenBuilder AddExtras(string extras);
 
         /// <summary>
         /// Returns the value of build RamenBowl
